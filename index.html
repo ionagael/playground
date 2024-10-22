@@ -397,7 +397,24 @@ function openCity(evt, cityName) {
 document.getElementById("defaultOpen").click();
 </script>
         
+</script>
 
+    <!-- Review Widget Script -->
+    <script type="text/javascript" id="review-widget"
+        data-customerlobby-company-id="58645"
+        data-customerlobby-widget-type="review_widget"
+        data-customerlobby-widget="true"
+        data-widget-width=""
+        data-review-count="">
+        (function() {
+            var script = document.createElement("script");
+            script.id = "customer-lobby-review-widget-script";
+            script.src = "https://api.customerlobby.com/widgets/widget";
+            script.async = true;
+            var entry = document.getElementById("review-widget");
+            entry.parentNode.insertBefore(script, entry);
+        })();
+    </script>
         
 
 
