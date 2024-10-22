@@ -1,403 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-  
-
-
-    body{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-      margin: 0;
-}
-  
-  img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-  
-ul.topnav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-ul.topnav li {float: left;}
-
-ul.topnav li a {
-  display: block;
-  color: #FFFFFF;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-family: georgia;
-}
-
-ul.topnav li a:hover:not(.active) {background-color: #111;}
-ul.topnav li a.active {background-color: #C4A484;}
-ul.topnav li.right {float: right;}
-
-@media screen and (max-width: 600px) {
-  ul.topnav li.right, 
-  ul.topnav li {float: none;}
-}
-
-/* Secondary Nav Bar */
-
-/* Style the tab */
-.tab1 {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #7fcc6c;
-}
-
-/* Style the buttons inside the tab */
-.tab1 button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-    font-family: georgia;
-  color: black;
-}
-
-/* Change background color of buttons on hover */
-.tab1 button:hover {
-  background-color: #c9fabe;
-}
-
-/* Create an active/current tablink class */
-.tab1 button.active {
-  background-color: #48a333;
-}
-
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-}
-
-/* This ends the secondary nav bar */
-  
-  h2 {text-align: center;}
-    h3 {text-align: center;}
-p {text-align: center;}
-  
-  p.a {
-    color: #FFFFFF;
-      font-family: Georgia;
-  }
-  
-  
-  .container { 
-  height: 100%;
-  position: relative;
-    margin: 20px;
-}
-
-
-
-/* Beginning of tertiary nav bar */
-/* Style the tab */
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-  
-}
-
-/* Style the buttons inside the tab */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-  font-family: georgia;
-  color: black;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-}
-
-/* Style the close button */
-.topright {
-  float: right;
-  cursor: pointer;
-  font-size: 28px;
-
-}
-
-.topright:hover {color: red;}
-
-/* End of tertiary nav bar */
-
-
-
-footer{
-    margin-top: auto;
-}
-  
-  .site-footer {
-  background: #333;
-}
-
-#footer-content {
-  background: #333;
-}
-  
-</style>
-
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML Website with JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
 
-        <ul class="topnav">
-            <li><a href="https://ionagael.github.io/LittleSistersCoffee/index.html">Home</a></li>          
-            <li><a class="active" href="https://ionagael.github.io/LittleSistersCoffee/Menu/Hot.html">Menu</a></li>
-            <li><a href="https://ionagael.github.io/LittleSistersCoffee/Contact.html">Contact Us</a></li>  
-            <li class="right"><a href="https://ionagael.github.io/LittleSistersCoffee/About.html">About</a></li>
-        </ul>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
 
-  <div class="container">
-<div class="tab1">
-  <button class= "active" onclick="location.href='https://ionagael.github.io/LittleSistersCoffee/Menu/Hot.html'">Hot Drinks</button>
-  <button onclick="location.href='https://ionagael.github.io/LittleSistersCoffee/Menu/Cold.html'">Cold Drinks</button>
-  <button onclick="location.href='https://ionagael.github.io/LittleSistersCoffee/Menu/Food.html'">Food</button>
-</div>
-</div>
+    <main>
+        <h2>This is a basic webpage</h2>
+        <p>Click the button below to see some magic happen:</p>
 
-<!-- Beginning Coffee Contents -->
+        <button onclick="showAlert()">Click Me</button>
+    </main>
 
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Coffee')" id="defaultOpen">Coffee</button>
-</div>
-
-<div id="Coffee" class="tabcontent">
-  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-  <h3>Coffee</h3>
-<ul class="blocktext"> 
-  
-    <li><b>Size:</b> small, medium, or large</li>
-  <li><b>Espresso shot: </b>standard, +1, +2, +3, +4, etc.</li>
-<li><b>Caffeination:</b> decaf or regular</li>
-<li><b>Flavoring: </b>french vanilla, caramel, or none</li>
-<li><b>Toppings: </b>caramel, whipped cream, or none</li>
-<li><b>Shot of Milk:</b> whole, skim, soy, oat, almond, or none</li>
-</ul>
-</div>
-
-<!-- End Coffee Contents -->
-
-<!-- Beginning Espresso Contents-->
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Espresso')" id="defaultOpen">Espresso</button>
-
-</div>
-
-<div id="Espresso" class="tabcontent">
-  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-  <h3>Espresso</h3>
-<ul class="blocktext">
-  <li><b>Size:</b> small, medium, or large</li>
-  <li><b>Espresso shot: </b>standard, +1, +2, +3, +4, etc.</li>
-<li><b>Caffeination:</b> decaf or regular</li>
-<li><b>Flavoring: </b>french vanilla, caramel, or none</li>
-<li><b>Toppings: </b>caramel, whipped cream, or none</li>
-<li><b>Shot of Milk:</b> whole, skim, soy, oat, almond, or none</li>
-</ul>
-</div>
-<!-- End Espresso Contents -->
-
-<!-- Beginning Macchiato Contents-->
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Macchiato')" id="defaultOpen">Macchiato</button>
-
-</div>
-
-<div id="Macchiato" class="tabcontent">
-  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-  <h3>Macchiato</h3>
-<ul class="blocktext"> 
-  
-    <li><b>Size:</b> small, medium, or large</li>
-  <li><b>Espresso shot: </b>standard, +1, +2, +3, +4, etc.</li>
-<li><b>Caffeination:</b> decaf or regular</li>
-<li><b>Flavoring: </b>french vanilla, caramel, or none</li>
-<li><b>Toppings: </b>caramel, whipped cream, or none</li>
-<li><b>Shot of Milk:</b> whole, skim, soy, oat, almond, or none</li>
-</ul>
-</div>
-<!-- End Macchiato Contents -->
-
-<!-- Beginning Latte Contents-->
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Latte')" id="defaultOpen">Latte</button>
-
-</div>
-
-<div id="Latte" class="tabcontent">
-  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-  <h3>Latte</h3>
-<ul class="blocktext"> 
-  
-    <li><b>Size:</b> small, medium, or large</li>
-  <li><b>Espresso shot: </b>standard, +1, +2, +3, +4, etc.</li>
-<li><b>Caffeination:</b> decaf or regular</li>
-<li><b>Flavoring: </b>french vanilla, caramel, or none</li>
-<li><b>Toppings: </b>caramel, whipped cream, or none</li>
-<li><b>Shot of Milk:</b> whole, skim, soy, oat, almond, or none</li>
-</ul>
-</div>
-<!-- End Latte Contents -->
-
-<!-- Beginning Americano Contents-->
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Americano')" id="defaultOpen">Americano</button>
-
-</div>
-
-<div id="Americano" class="tabcontent">
-  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-  <h3>Americano</h3>
-<ul class="blocktext"> 
-  
-    <li><b>Size:</b> small, medium, or large</li>
-  <li><b>Espresso shot: </b>standard, +1, +2, +3, +4, etc.</li>
-<li><b>Caffeination:</b> decaf or regular</li>
-<li><b>Flavoring: </b>french vanilla, caramel, or none</li>
-<li><b>Toppings: </b>caramel, whipped cream, or none</li>
-<li><b>Shot of Milk:</b> whole, skim, soy, oat, almond, or none</li>
-</ul>
-</div>
-<!-- End Americano Contents -->
-
-<!-- Beginning Cappuccino Contents-->
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Cappuccino')" id="defaultOpen">Cappuccino</button>
-
-</div>
-
-<div id="Cappuccino" class="tabcontent">
-  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-  <h3>Cappuccino</h3>
-<table>
-
-  
-    <tr>
-   <td>Size</td>
-    <td> <img src="https://ionagael.github.io/LittleSistersCoffee/images/girlcup1.png" width="25" height="25" alt="Logo"></td>
-    <td> <img src="https://ionagael.github.io/LittleSistersCoffee/images/girlcup1.png" width="30" height="30" alt="Logo"></td>
-    <td> <img src="https://ionagael.github.io/LittleSistersCoffee/images/girlcup1.png" width="40" height="40" alt="Logo"></td>
-                        <td>05:00 am - 06:00 pm</td>
-                                <td>05:00 am - 06:00 pm</td>
-                                        <td>05:00 am - 06:00 pm</td>
-  </tr>
-  
-      <tr>
-   <td>Espresso Shot</td>
-    <td>05:00 am - 06:00 pm</td>
-        <td>05:00 am - 06:00 pm</td>
-                <td>05:00 am - 06:00 pm</td>
-                        <td>05:00 am - 06:00 pm</td>
-                                <td>05:00 am - 06:00 pm</td>
-                                        <td>05:00 am - 06:00 pm</td>
-  </tr>
-  
-        <tr>
-   <td>Caffeination</td>
-    <td>05:00 am - 06:00 pm</td>
-        <td>05:00 am - 06:00 pm</td>
-                <td>05:00 am - 06:00 pm</td>
-                        <td>05:00 am - 06:00 pm</td>
-                                <td>05:00 am - 06:00 pm</td>
-                                        <td>05:00 am - 06:00 pm</td>
-  </tr>
-  
-        <tr>
-   <td>Flavoring</td>
-    <td>05:00 am - 06:00 pm</td>
-        <td>05:00 am - 06:00 pm</td>
-                <td>05:00 am - 06:00 pm</td>
-                        <td>05:00 am - 06:00 pm</td>
-                                <td>05:00 am - 06:00 pm</td>
-                                        <td>05:00 am - 06:00 pm</td>
-  </tr>
-  
-        <tr>
-   <td>Toppings</td>
-    <td>05:00 am - 06:00 pm</td>
-        <td>05:00 am - 06:00 pm</td>
-                <td>05:00 am - 06:00 pm</td>
-                        <td>05:00 am - 06:00 pm</td>
-                                <td>05:00 am - 06:00 pm</td>
-                                        <td>05:00 am - 06:00 pm</td>
-  </tr>
-  
-        <tr>
-   <td>Milk</td>
-    <td>05:00 am - 06:00 pm</td>
-        <td>05:00 am - 06:00 pm</td>
-                <td>05:00 am - 06:00 pm</td>
-                        <td>05:00 am - 06:00 pm</td>
-                                <td>05:00 am - 06:00 pm</td>
-                                        <td>05:00 am - 06:00 pm</td>
-  </tr>
-  
-</table>
-
-</div>
-<!-- End Cappuccino Contents -->
-
-<script>
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
-        
-</script>
+    <script>
+        function showAlert() {
+            alert("Hello! You clicked the button.");
+        }
+    </script>
 
     <!-- Review Widget Script -->
     <script type="text/javascript" id="review-widget"
@@ -415,23 +66,6 @@ document.getElementById("defaultOpen").click();
             entry.parentNode.insertBefore(script, entry);
         })();
     </script>
-        
-
 
 </body>
-
-  <footer class="site-footer">
-  
-    <div style="padding: 5px;">
-          <img src="https://ionagael.github.io/LittleSistersCoffee/logos/Logo500x500white.png" width="50" height="50" alt="Logo">
-
-</div>
-
-  <div id="footer-content">
-    <p class="a">Little Sister LLC, dba Little Sister's Coffee, founded 2023</p>
-<p class="a">109 E. Broadway, Medford WI 54451</p>
-  </div>
-  
-</footer>
-  
 </html>
