@@ -3,80 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer Lobby Widget</title>
+    <title>Customer Lobby Button</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 15px;
             text-align: center;
-        }
-        #customer-lobby-widget {
-            margin: 20px auto;
             padding: 20px;
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            max-width: 600px;
-            text-align: center;
+            background-color: #f9f9f9;
+        }
+        a img {
+            border: none;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Customer Lobby Widget Integration</h1>
-    </header>
 
-    <main>
-        <h2>See Our Reviews Below</h2>
-        <!-- Placeholder for Customer Lobby Widget -->
-        <div id="customer-lobby-widget">Loading reviews...</div>
-    </main>
+    <h1>Customer Reviews</h1>
+    <p>Click the button below to view our reviews on Customer Lobby:</p>
+    <!-- Button that links to the Customer Lobby review page -->
+    <a href="https://www.customerlobby.com/reviews/25749/easy-moving-company/review/51752748" target="_blank">
+        <img style="width:220px;height:130px;" src="https://customerlobby-widget-images.s3.amazonaws.com/v2/customers_dynamic_rectangle.png" alt="dynamic-button">
+    </a>
 
-    <script>
-        // Helper Functions from CL Namespace
-        function formatParams(params) {
-            return "?" + Object.keys(params).map(function(key) {
-                return key + "=" + params[key];
-            }).join("&");
-        }
-
-        function getWidgetView(params, location, callback) {
-            var xhttp = new XMLHttpRequest();
-            var url = encodeURI("https://api.customerlobby.com/widgets/widget-view" + formatParams(params));
-            xhttp.onreadystatechange = function () {
-                if (this.readyState === 4 && this.status === 200) {
-                    callback(location, this.responseText);
-                }
-            };
-            xhttp.open("GET", url, true);
-            xhttp.send();
-        }
-
-        function drawWidget(location, html) {
-            location.innerHTML = html; // Replace content with the widget HTML
-        }
-
-        // Manual Initialization for the Widget
-        (function initializeCustomerLobbyWidget() {
-            const widgetContainer = document.getElementById("customer-lobby-widget");
-            const widgetParams = {
-                company_id: "58645", // Replace with your actual company ID
-                widget_type: "review_widget", // Type of widget
-                widget_width: "100%", // Optional width
-                review_count: "5", // Number of reviews to display
-                widget_color: "blue" // Optional color parameter
-            };
-
-            // Fetch and render the widget
-            getWidgetView(widgetParams, widgetContainer, drawWidget);
-        })();
-    </script>
 </body>
 </html>
