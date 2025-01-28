@@ -29,10 +29,10 @@
         button:hover {
             background-color: #45a049;
         }
+        #customer-lobby-widget {
+            margin-top: 20px;
+        }
     </style>
-
-    <script id="pulsem-embed-gsd" defer src="https://static.speetra.com/embed-pulsemweb-gsd.js" data-id="442e2bffc07fe599ff57404643efa90012b7379746eb8e0010de40da6cd6837a"></script>
-    
 </head>
 <body>
 
@@ -46,29 +46,38 @@
 
         <button onclick="showAlert()">Click Me</button>
 
-        <img style="width:220px;height:130px;" src="https://customerlobby-widget-images.s3.amazonaws.com/v2/customers_dynamic_rectangle.png" alt="dynamic-button">
+        <!-- Dynamic Button Image -->
+        <div id="dynamic-button-container"></div>
+
+        <!-- Review Widget -->
+        <div id="customer-lobby-widget"></div>
     </main>
 
     <script>
+        // Show alert on button click
         function showAlert() {
             alert("Hello! You clicked the button.");
         }
-    </script>
 
-    <!-- Review Widget Script -->
-    <script type="text/javascript" id="review-widget"
-        data-customerlobby-company-id="58645"
-        data-customerlobby-widget-type="review_widget"
-        data-customerlobby-widget="true"
-        data-widget-width=""
-        data-review-count="">
+        // Load dynamic button image
+        const dynamicButtonContainer = document.getElementById("dynamic-button-container");
+        const dynamicImg = document.createElement("img");
+        dynamicImg.src = "https://customerlobby-widget-images.s3.amazonaws.com/v2/customers_dynamic_rectangle.png";
+        dynamicImg.alt = "dynamic-button";
+        dynamicImg.style = "width:220px;height:130px;";
+        dynamicButtonContainer.appendChild(dynamicImg);
+
+        // Load Customer Lobby Review Widget
         (function() {
             var script = document.createElement("script");
             script.id = "customer-lobby-review-widget-script";
             script.src = "https://api.customerlobby.com/widgets/widget";
             script.async = true;
-            var entry = document.getElementById("review-widget");
-            entry.parentNode.insertBefore(script, entry);
+            script.onload = function() {
+                console.log("Customer Lobby widget loaded");
+            };
+            var widgetDiv = document.getElementById("customer-lobby-widget");
+            widgetDiv.appendChild(script);
         })();
     </script>
 
